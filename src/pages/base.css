@@ -3,6 +3,25 @@
 @tailwind components;
 @tailwind utilities;
 
-.text-shadow {
-  text-shadow: 0 0 20px 20px white;
+.superHeavyColor {
+  color: green;
+}
+
+@layer utilities {
+  .glow {
+    animation-name: glow;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes glow {
+    from {
+      text-shadow:none;
+    }
+
+    to {
+      text-shadow:0 0 20px silver;
+    }
+  }
 }

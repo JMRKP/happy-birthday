@@ -1,5 +1,18 @@
 ---
 import Presentable from "../components/Presentable.astro";
+import "./base.css";
+const textParts = [
+  "Herzlichen Glückwunsch",
+  "Zum 70. Geburtstag",
+  "Liebe Mama",
+  "❤",
+  "🎁?",
+  "Ich möchte dich",
+  "nach Hamburg einladen",
+  "mit Übernachtung",
+  "Essen",
+  "und Theaterbesuch.",
+];
 ---
 
 <html lang="en">
@@ -12,14 +25,17 @@ import Presentable from "../components/Presentable.astro";
       class="flex h-screen bg-black w-full justify-center items-center text-justify text-red-500 text-9xl font-bold"
     >
       <div class="relative">
-        <Presentable id="0" nextId="1" border={false}>
-          Herzlichen Glückwunsch
-        </Presentable>
-        <Presentable id="1" nextId="2" border={false}>
-          Zum 70. Geburtstag
-        </Presentable>
-        <Presentable id="2" nextId="3" border={false}>Liebe Mama</Presentable>
-        <Presentable id="3" nextId="0" border={false}>❤</Presentable>
+        {
+          textParts.map((t, id) => (
+            <Presentable
+              id={id}
+              nextId={textParts.length - 1 === id ? 0 : id + 1}
+              border={false}
+            >
+              {t}
+            </Presentable>
+          ))
+        }
       </div>
     </main>
   </body>
