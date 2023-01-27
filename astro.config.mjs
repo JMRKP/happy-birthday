@@ -9,5 +9,6 @@ export default defineConfig({
     config: {
       applyBaseStyles: true,
     }
-  })]
+  })],
+  outDir: './docs'
 });
