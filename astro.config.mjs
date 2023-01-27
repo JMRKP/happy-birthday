@@ -12,7 +12,6 @@ export default defineConfig({
       },
     }),
   ],
-  outDir: "./docs",
   site: "https://jmrkp.github.io",
   base: "/happy-birthday",
 });
