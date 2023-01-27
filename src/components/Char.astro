@@ -1,0 +1,14 @@
+---
+const growing = Astro.props.growing;
+---
+
+<span
+  class:list={{
+    transition: growing,
+    "ease-in-out": growing,
+    "hover:scale-125": growing,
+    "duration-300": growing,
+  }}
+>
+  {Astro.props.char}
+</span>

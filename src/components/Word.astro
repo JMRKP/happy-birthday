@@ -1,0 +1,7 @@
+---
+import Char from "./Char.astro";
+---
+
+<span class="flex">
+  {Array.from(Astro.props.value).map((char) => <Char char={char} growing={false} />)}
+</span>

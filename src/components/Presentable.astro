@@ -1,0 +1,30 @@
+---
+const { border = true } = Astro.props;
+---
+
+<a
+  href={`#${Astro.props.nextId}`}
+  id={Astro.props.id}
+  class:list={[
+    { "active:border-0": !border },
+    "absolute",
+    { "border-8": border, "rounded-lg": border, "border-black": border },
+    "p-10",
+    "text-center",
+    "-translate-x-1/2",
+    "-translate-y-1/2",
+    "z-0",
+    "opacity-0",
+    "scale-95",
+    "target:transition",
+    "hover:transition-all",
+    "ease-in",
+    "duration-500",
+    "hover:scale-100",
+    { "hover:shadow-[0_0_50px_20px_white]": border },
+    { "hover:[text-shadow:0_0_20px_white]": !border },
+    "target:z-10",
+    "target:opacity-100",
+    "target:delay-500",
+  ]}><slot /></a
+>

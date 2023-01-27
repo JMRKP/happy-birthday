@@ -1,0 +1,25 @@
+---
+import "./base.css";
+import Word from "./Word.astro";
+
+---
+
+<html lang="en">
+  <meta charset="UTF-8" />
+
+  <title>My Homepage</title>
+
+  <body>
+    <main
+      class="flex h-screen bg-red-500 w-full place-items-center justify-center text-black text-9xl font-bold"
+    >
+      <div
+        class="flex flex-col items-center p-8 border-8 rounded-lg border-black w-min hover:shadow-[0_0_20px_20px_white] transition-transform ease-in-out duration-300 target:scale-105"
+      >
+        <Word id="there" value="HI!" />
+        <Word value="HERZLICHEN" />
+        <Word value="GLÜCKWUNSCH" />
+      </div>
+    </main>
+  </body>
+</html>
